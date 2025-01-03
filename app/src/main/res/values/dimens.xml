@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_clickable_size">48dp</dimen>
+    <dimen name="nav_drawer_horizontal_padding">28dp</dimen>
+    <dimen name="nav_drawer_vertical_padding">4dp</dimen>
+    <dimen name="nav_header_margin">24dp</dimen>
+</resources>

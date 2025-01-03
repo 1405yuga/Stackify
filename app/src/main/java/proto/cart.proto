@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option java_package = "com.example.stackify";
+option java_outer_classname = "ShoppingCartProto";
+
+message CartItem {
+  int32 item_id = 1;
+  string item_name = 2;
+  int32 stock = 3;
+  bool is_purchased = 4;
+}
+
+message ShoppingCart {
+  repeated CartItem cart_item_list = 1;
+}

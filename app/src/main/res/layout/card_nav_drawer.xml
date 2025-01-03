@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/nav_header_margin"
+            android:layout_marginTop="48dp"
+            app:cardCornerRadius="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                android:src="@mipmap/ic_launcher_round" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/nav_header_margin"
+            android:layout_marginBottom="@dimen/nav_header_margin"
+            android:text="@string/app_name"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"
+            android:textColor="@color/md_theme_primary" />
+
+        <TextView
+            android:id="@+id/shopping_cart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/min_clickable_size"
+            android:minHeight="@dimen/min_clickable_size"
+            android:paddingHorizontal="@dimen/nav_drawer_horizontal_padding"
+            android:paddingVertical="@dimen/nav_drawer_vertical_padding"
+            android:text="Shopping Cart"
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            app:drawableLeftCompat="@drawable/baseline_add_shopping_cart_24" />
+
+        <TextView
+            android:id="@+id/documentation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/min_clickable_size"
+            android:minHeight="@dimen/min_clickable_size"
+            android:paddingHorizontal="@dimen/nav_drawer_horizontal_padding"
+            android:paddingVertical="@dimen/nav_drawer_vertical_padding"
+            android:text="Documentation"
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            app:drawableLeftCompat="@drawable/baseline_documentation_24" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:drawablePadding="12dp"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minWidth="@dimen/min_clickable_size"
+            android:minHeight="@dimen/min_clickable_size"
+            android:paddingHorizontal="@dimen/nav_drawer_horizontal_padding"
+            android:paddingVertical="@dimen/nav_drawer_vertical_padding"
+            android:text="About developer"
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="?attr/colorOnSecondaryContainer"
+            app:drawableLeftCompat="@drawable/baseline_about_outline_24" />
+    </LinearLayout>
+</ScrollView>
