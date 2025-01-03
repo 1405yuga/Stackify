@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graphs"
+    app:startDestination="@id/catalogListFragment">
+    <fragment
+        android:id="@+id/catalogListFragment"
+        android:name="com.example.stackify.ui.home_fragment.CatalogListFragment"
+        android:label="fragment_catalog_list"
+        tools:layout="@layout/fragment_catalog_list" />
+    <fragment
+        android:id="@+id/updateCatalogFragment"
+        android:name="com.example.stackify.ui.edit_catlog_fragment.UpdateCatalogFragment"
+        android:label="fragment_update_catalog"
+        tools:layout="@layout/fragment_update_catalog" />
+    <fragment
+        android:id="@+id/shoppingCartFragment"
+        android:name="com.example.stackify.ui.shopping_cart_fragment.ShoppingCartFragment"
+        android:label="ShoppingCartFragment" />
+</navigation>

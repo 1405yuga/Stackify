@@ -9,7 +9,7 @@ import com.example.stackify.entity.catalog.Catalog
 import com.example.stackify.helper.Converters
 import kotlin.concurrent.Volatile
 
-@Database(entities = [Catalog::class], version = 3, exportSchema = false)
+@Database(entities = [Catalog::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class CatalogDatabase : RoomDatabase() {
 
