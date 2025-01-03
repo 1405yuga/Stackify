@@ -2,7 +2,7 @@
 
 An Android app designed for efficiently organizing and tracking catalogs, each containing categorized items with available quantities. Users can easily add, update, or delete catalogs, and choose to display them in grid or linear layouts, making it perfect for inventory management, personal organization, and quick access to categorized lists.
 
-<!-- TODO : ADD app icon -->
+[![Stackify](https://github.com/1405yuga/Stackify/raw/refs/heads/main/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp "[Stackify] - An app to organize categories, create item lists with quantities, and display them in grid or staggered views based on user preference.")](https://github.com/1405yuga/Stackify)
 
 ## Guide 
 
