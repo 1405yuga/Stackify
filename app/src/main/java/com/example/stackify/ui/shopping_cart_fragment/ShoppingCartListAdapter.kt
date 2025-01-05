@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.stackify.ShoppingCartProto
 import com.example.stackify.databinding.CardShoppingItemBinding
@@ -60,11 +61,14 @@ class ShoppingCartListAdapter(
             binding.stock.text = cartItem.stock.toString()
             binding.itemNameEditText.setOnKeyListener { view, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_ENTER) {
-                    addItemView(adapterPosition, binding.itemNameEditText.selectionStart)
+                    if (isAdapterPositionValid(adapterPosition)) addItemView(
+                        adapterPosition,
+                        binding.itemNameEditText.selectionStart
+                    )
                     true
                 } else if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_DEL) {
                     if (binding.itemNameEditText.selectionStart == 0 && adapterPosition > 0) {
-                        removeItem(adapterPosition)
+                        if (isAdapterPositionValid(adapterPosition)) removeItem(adapterPosition)
                     }
                     true
                 } else {
@@ -82,12 +86,12 @@ class ShoppingCartListAdapter(
             binding.addQuantity.setOnClickListener {
                 stock++
                 binding.stock.text = stock.toString()
-                updateStock(adapterPosition, stock)
+                if (isAdapterPositionValid(adapterPosition)) updateStock(adapterPosition, stock)
             }
             binding.subQuantity.setOnClickListener {
                 if (stock > 0) stock--
                 binding.stock.text = stock.toString()
-                updateStock(adapterPosition, stock)
+                if (isAdapterPositionValid(adapterPosition)) updateStock(adapterPosition, stock)
             }
             binding.itemNameEditText.addTextChangedListener(object : TextWatcher {
                 private var doJob: Job? = null
@@ -101,11 +105,18 @@ class ShoppingCartListAdapter(
 //                        delay(500)
                         p0?.let {
                             Log.d(TAG, "AFTER text changed $p0")
-                            updateItemName(adapterPosition, p0.toString())
+                            if (isAdapterPositionValid(adapterPosition)) updateItemName(
+                                adapterPosition,
+                                p0.toString()
+                            )
                         }
                     }
                 }
             })
+        }
+
+        fun isAdapterPositionValid(position: Int): Boolean {
+            return position != RecyclerView.NO_POSITION
         }
     }
 
