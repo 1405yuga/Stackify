@@ -193,7 +193,7 @@ class ShoppingCartFragment : Fragment() {
                 shoppingCartListAdapter.submitList(updatedList) {
                     val currentPos = (updatedList?.size ?: 1) - 1
                     shoppingCartListAdapter.notifyItemInserted(currentPos)
-                    setFocusOnEditTextAt(currentPos)
+//                    setFocusOnEditTextAt(currentPos)
                 }
             }
         }

@@ -71,10 +71,13 @@ class ShoppingCartViewModel(private val cartRepository: ShoppingCartRepository) 
             cartItem?.let { it1 ->
                 Log.d(TAG, "cart item created---------")
                 try {
-                    this.tempCartItemsList?.add(
-                        index = currentPos + 1,
-                        element = it1
-                    )
+                    val updatesList = this.tempCartItemsList?.apply {
+                        add(
+                            index = currentPos + 1,
+                            element = it1
+                        )
+                    }
+                    this.tempCartItemsList = updatesList
                 } catch (exception: Exception) {
                     exception.printStackTrace()
                 }
