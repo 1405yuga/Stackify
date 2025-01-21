@@ -135,26 +135,31 @@ class ShoppingCartFragment : Fragment() {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
                 val cartItem = shoppingCartListAdapter.currentList[position]
-
-                shoppingCartViewModel.tempCartItemsList?.removeAt(index = position)
+                val updatedList = shoppingCartViewModel.tempCartItemsList?.apply {
+                    removeAt(index = position)
+                }
+                shoppingCartViewModel.tempCartItemsList = updatedList
                 Log.d(
                     TAG,
                     "List after deletion : ${shoppingCartViewModel.tempCartItemsList?.size}"
                 )
-                shoppingCartListAdapter.submitList(shoppingCartViewModel.tempCartItemsList?.toList())
+                shoppingCartListAdapter.submitList(updatedList)
                 shoppingCartListAdapter.notifyItemRemoved(position)
-                binding.shoppingListRecyclerView.adapter = shoppingCartListAdapter
+//                binding.shoppingListRecyclerView.adapter = shoppingCartListAdapter
 
                 Snackbar.make(
                     binding.shoppingListRecyclerView,
                     "${cartItem.itemName} removed",
                     Snackbar.LENGTH_LONG
                 ).setAction("Undo") {
-                    shoppingCartViewModel.tempCartItemsList?.add(
-                        index = position,
-                        element = cartItem
-                    )
-                    shoppingCartListAdapter.submitList(shoppingCartViewModel.tempCartItemsList?.toList())
+                    val undoList = shoppingCartViewModel.tempCartItemsList?.apply {
+                        add(
+                            index = position,
+                            element = cartItem
+                        )
+                    }
+                    shoppingCartListAdapter.submitList(undoList)
+                    shoppingCartListAdapter.notifyItemInserted(position)
                 }.show()
             }
 

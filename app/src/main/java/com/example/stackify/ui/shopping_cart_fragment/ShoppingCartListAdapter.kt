@@ -61,10 +61,11 @@ class ShoppingCartListAdapter(
             binding.stock.text = cartItem.stock.toString()
             binding.itemNameEditText.setOnKeyListener { view, i, keyEvent ->
                 if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_ENTER) {
-                    if (isAdapterPositionValid(adapterPosition)) addItemView(
-                        adapterPosition,
-                        binding.itemNameEditText.selectionStart
-                    )
+                    if (isAdapterPositionValid(adapterPosition))
+                        addItemView(
+                            adapterPosition,
+                            binding.itemNameEditText.selectionStart
+                        )
                     true
                 } else if (keyEvent.action == KeyEvent.ACTION_DOWN && i == KeyEvent.KEYCODE_DEL) {
                     if (binding.itemNameEditText.selectionStart == 0 && adapterPosition > 0) {
