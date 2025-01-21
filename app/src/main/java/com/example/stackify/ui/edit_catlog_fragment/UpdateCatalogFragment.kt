@@ -218,26 +218,10 @@ class UpdateCatalogFragment : Fragment() {
                 }
             }
             addHomeItemTextButton.setOnClickListener {
-                viewModel.catalog?.catalogListItems?.add(
-                    index = 0,
-                    element = CatalogListItem(itemName = "", availableStock = 0)
-                )
-                updateHomeItemListAdapter.submitList(viewModel.catalog?.catalogListItems)
-                updateHomeItemListAdapter.notifyItemInserted(0)
-                binding.homeItemsRecyclerView.post {
-                    val currentEditText =
-                        binding.homeItemsRecyclerView
-                            .findViewHolderForAdapterPosition(0)
-                            ?.itemView?.findViewById<EditText>(R.id.item_name_edit_text)
-                    //set focus
-                    currentEditText?.requestFocus()
-                    //open- keyboard
-                    val imm: InputMethodManager =
-                        requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.showSoftInput(currentEditText, 0)
-                }
-
-                binding.homeItemsRecyclerView.adapter = updateHomeItemListAdapter
+                addBlankItemAt(position = 0)
+            }
+            addItemFloatingBtn.setOnClickListener {
+                addBlankItemAt(position = viewModel.catalog?.catalogListItems?.size ?: 0)
             }
             backButton.setOnClickListener { navigateToBackFragment() }
 //            categoryText.apply {
@@ -245,6 +229,29 @@ class UpdateCatalogFragment : Fragment() {
 //                setSelection(this.length())
 //            }
         }
+    }
+
+    private fun addBlankItemAt(position: Int) {
+        viewModel.catalog?.catalogListItems?.add(
+            index = position,
+            element = CatalogListItem(itemName = "", availableStock = 0)
+        )
+        updateHomeItemListAdapter.submitList(viewModel.catalog?.catalogListItems)
+        updateHomeItemListAdapter.notifyItemInserted(position)
+        binding.homeItemsRecyclerView.post {
+            val currentEditText =
+                binding.homeItemsRecyclerView
+                    .findViewHolderForAdapterPosition(position)
+                    ?.itemView?.findViewById<EditText>(R.id.item_name_edit_text)
+            //set focus
+            currentEditText?.requestFocus()
+            //open- keyboard
+            val imm: InputMethodManager =
+                requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(currentEditText, 0)
+        }
+
+        binding.homeItemsRecyclerView.adapter = updateHomeItemListAdapter
     }
 
     private fun navigateToBackFragment() {
