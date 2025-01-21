@@ -1,5 +1,6 @@
 package com.example.stackify.entity.catalog
 
+import android.util.Log
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -61,6 +62,12 @@ data class Catalog(
                 )
             }
             this.catalogListItems.add(index = index + 1, element = catalogListItem)
+            Log.d(
+                "Catalog",
+                "current item ; ${this.catalogListItems.getOrNull(index)}, next item:${
+                    this.catalogListItems.getOrNull(index + 1)
+                }"
+            )
         }
     }
 }

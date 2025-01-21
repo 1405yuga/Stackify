@@ -145,6 +145,7 @@ class UpdateCatalogFragment : Fragment() {
                         .toJson(viewModel.catalog?.catalogListItems)
         )
         updateHomeItemListAdapter.submitList(viewModel.catalog?.catalogListItems)
+        updateHomeItemListAdapter.notifyItemChanged(currentIndex)
         updateHomeItemListAdapter.notifyItemInserted(currentIndex + 1)
         binding.homeItemsRecyclerView.post {
             binding.homeItemsRecyclerView
