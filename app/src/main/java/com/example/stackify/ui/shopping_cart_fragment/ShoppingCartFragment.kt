@@ -1,6 +1,7 @@
 package com.example.stackify.ui.shopping_cart_fragment
 
 import android.content.Context
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -178,18 +179,22 @@ class ShoppingCartFragment : Fragment() {
         binding.addItemFloatingBtn.setOnClickListener {
             lifecycleScope.launch {
                 val updatedList = shoppingCartViewModel.tempCartItemsList?.apply {
-                    add(
-                        index = shoppingCartViewModel.tempCartItemsList!!.size,
-                        element = CartItem.getDefaultInstance()
-                    )
-
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.VANILLA_ICE_CREAM) {
+                        addLast(CartItem.getDefaultInstance())
+                    } else {
+                        add(
+                            index = shoppingCartViewModel.tempCartItemsList!!.size,
+                            element = CartItem.getDefaultInstance()
+                        )
+                    }
                 }
                 Log.d(TAG, "Added List : ${shoppingCartViewModel.tempCartItemsList?.size}")
                 Log.d(TAG, "List : ${updatedList?.size}")
-                shoppingCartListAdapter.submitList(updatedList)
-                val currentPos = (updatedList?.size ?: 1) - 1
-                shoppingCartListAdapter.notifyItemInserted(currentPos)
-                setFocusOnEditTextAt(currentPos)
+                shoppingCartListAdapter.submitList(updatedList) {
+                    val currentPos = (updatedList?.size ?: 1) - 1
+                    shoppingCartListAdapter.notifyItemInserted(currentPos)
+                    setFocusOnEditTextAt(currentPos)
+                }
             }
         }
         binding.saveButton.setOnClickListener {
@@ -214,7 +219,6 @@ class ShoppingCartFragment : Fragment() {
         binding.shoppingListRecyclerView.post {
             lifecycleScope.launch {
                 delay(200)
-                Log.d(TAG, "Item inserted position : $position")
                 binding.shoppingListRecyclerView
                     .findViewHolderForAdapterPosition(position)
                     .let { vh ->
