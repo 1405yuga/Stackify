@@ -177,18 +177,19 @@ class ShoppingCartFragment : Fragment() {
         }
         binding.addItemFloatingBtn.setOnClickListener {
             lifecycleScope.launch {
-                shoppingCartViewModel.tempCartItemsList?.let { list ->
-                    list.add(
-                        index = list.size,
+                val updatedList = shoppingCartViewModel.tempCartItemsList?.apply {
+                    add(
+                        index = shoppingCartViewModel.tempCartItemsList!!.size,
                         element = CartItem.getDefaultInstance()
                     )
+
                 }
-                Log.d(TAG, "List : ${shoppingCartViewModel.tempCartItemsList?.size}")
-                shoppingCartListAdapter.submitList(shoppingCartViewModel.tempCartItemsList?.toList())
-                val currentPos = (shoppingCartViewModel.tempCartItemsList?.size ?: 1) - 1
+                Log.d(TAG, "Added List : ${shoppingCartViewModel.tempCartItemsList?.size}")
+                Log.d(TAG, "List : ${updatedList?.size}")
+                shoppingCartListAdapter.submitList(updatedList)
+                val currentPos = (updatedList?.size ?: 1) - 1
                 shoppingCartListAdapter.notifyItemInserted(currentPos)
                 setFocusOnEditTextAt(currentPos)
-
             }
         }
         binding.saveButton.setOnClickListener {
