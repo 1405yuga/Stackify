@@ -195,11 +195,12 @@ class ShoppingCartFragment : Fragment() {
                 }
                 Log.d(TAG, "Added List : ${shoppingCartViewModel.tempCartItemsList?.size}")
                 Log.d(TAG, "List : ${updatedList?.size}")
-                shoppingCartListAdapter.submitList(updatedList) {
-                    val currentPos = (updatedList?.size ?: 1) - 1
-                    shoppingCartListAdapter.notifyItemInserted(currentPos)
-//                    setFocusOnEditTextAt(currentPos)
-                }
+                shoppingCartListAdapter.submitList(updatedList)
+//                {
+//                    val currentPos = (updatedList?.size ?: 1) - 1
+//                    shoppingCartListAdapter.notifyItemInserted(currentPos)
+////                    setFocusOnEditTextAt(currentPos)
+//                }
             }
         }
         binding.saveButton.setOnClickListener {
