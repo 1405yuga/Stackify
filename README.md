@@ -52,7 +52,8 @@ User can click on three-dashed icon for navigation view for more app orieneted o
 
 <img src="https://github.com/user-attachments/assets/b5f05a9a-828a-4463-ac8d-606b5d920ac1" width=273 />
 
-- ` Shopping Cart ` menu allows users to create a shopping list, add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
+###  Shopping Cart 
+This menu allows users to create a shopping list, add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
 1. Add Shopping Cart items
 <img src="https://github.com/user-attachments/assets/df07103c-867a-4f99-8018-3a06c1115596" width=273 />
 
@@ -65,9 +66,16 @@ User can click on three-dashed icon for navigation view for more app orieneted o
 4. View and Edit Shopping Cart
 <img src="https://github.com/user-attachments/assets/3e8ed0b6-8760-4b15-b31a-54f0c80d316e" width=273 />
 
-- ` Documentation ` menu navigates to the documentation page which describes how to use this app.
+<br />
+
+ ### Documentation 
+ This menu navigates to the documentation page which describes how to use this app.
+ 
 <img src="https://github.com/user-attachments/assets/44445f50-782f-4e45-b457-aa88945340f3" width=273 />
 
-- ` About developer ` menu navigates to the developer's profile.
+<br />
+
+### About developer 
+This menu navigates to the developer's profile.
   
 <img src="https://github.com/user-attachments/assets/40e83b9b-9aa3-44c4-9c38-707f20e86d46" width=273 />
