@@ -30,6 +30,6 @@ User can click on the top right icon to switch the layout according to it's pref
 
 ## Navigation View :
 User can click on three-dashed icon for navigation view for more app orieneted options.
-
-` Documentation ` menu navigates to the documentation page which describes how to use this app. </br>
-` About developer ` menu navigates to the developer's profile.
+- ` Shopping Cart ` menu allows users to create a shopping list, add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
+- ` Documentation ` menu navigates to the documentation page which describes how to use this app.
+- ` About developer ` menu navigates to the developer's profile.
