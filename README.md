@@ -31,10 +31,16 @@ Tap on a catalog card to view the entire catlog. This will open the edit screen,
 ### Remove & Undo Items:
 **Swipe** the item-name field in left or right direction to delete entire item-name field. To restore a deleted item-name field, simply tap the ` Undo ` option that appears.
 
-<img src="https://github.com/user-attachments/assets/c3fb8625-7159-4110-82ba-5d7a9d99ea51" width=273 />
+1. Undo Catlog items
+<img src="https://github.com/user-attachments/assets/eb3b7522-9490-4031-ad0a-6b2c4d7028ab" width=273 />
+
+2. Remove Catlog items
+<img src="https://github.com/user-attachments/assets/ef05a46f-c0a2-4e62-8783-1b1b90180c56" width=273 />
 
 ## Delete & Undo Catlog:
 **Swipe** the catlog card in left or right direction to delete entire catlog. To restore a deleted catalog, simply tap the ` Undo ` option that appears.
+
+<img src="https://github.com/user-attachments/assets/cf0034c9-d6b0-4505-95b6-30132494ca16" width=273 />
 
 ## Toggle List layout :
 User can click on the top right icon to switch the layout according to it's preference i.e **Linear display** or **StaggeredGrid display**. This preferences will be saved and retrived again on next use of this application.
@@ -47,5 +53,21 @@ User can click on three-dashed icon for navigation view for more app orieneted o
 <img src="https://github.com/user-attachments/assets/b5f05a9a-828a-4463-ac8d-606b5d920ac1" width=273 />
 
 - ` Shopping Cart ` menu allows users to create a shopping list, add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
+1. Add Shopping Cart items
+<img src="https://github.com/user-attachments/assets/df07103c-867a-4f99-8018-3a06c1115596" width=273 />
+
+2. Undo Shopping Cart items
+<img src="https://github.com/user-attachments/assets/d63365c5-b668-4bfb-8e46-4853223ad4b5" width=273 />
+
+3. Remove Shopping Cart items
+<img src="https://github.com/user-attachments/assets/2ec65e31-4703-4fbc-a950-5a2b74a689d3" width=273 />
+
+4. View and Edit Shopping Cart
+<img src="https://github.com/user-attachments/assets/3e8ed0b6-8760-4b15-b31a-54f0c80d316e" width=273 />
+
 - ` Documentation ` menu navigates to the documentation page which describes how to use this app.
+<img src="https://github.com/user-attachments/assets/44445f50-782f-4e45-b457-aa88945340f3" width=273 />
+
 - ` About developer ` menu navigates to the developer's profile.
+  
+<img src="https://github.com/user-attachments/assets/40e83b9b-9aa3-44c4-9c38-707f20e86d46" width=273 />
