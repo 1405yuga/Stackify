@@ -24,17 +24,14 @@ User can click on ` + ` floating button on the main screen to add a new catlog. 
 
 
 ## View & Edit Catlog :
-Tap on a catalog card to view the entire catlog. This will open the edit screen, where you can see and make changes to the catlog.
-
-<img src="https://github.com/user-attachments/assets/811f1319-06fe-435b-9827-a482d8977e6e" width=273 />
-
-### Remove & Undo Items:
+**Tap** on a catalog card to view the entire catlog. This will open the edit screen, where you can see and make changes to the catlog.
 **Swipe** the item-name field in left or right direction to delete entire item-name field. To restore a deleted item-name field, simply tap the ` Undo ` option that appears.
-
-1. Undo Catlog items
+1. In first image, View Catlog Item
+2. In second image, Undo removed Catlog items
+3. In third image, Remove Catlog items
+   
+<img src="https://github.com/user-attachments/assets/811f1319-06fe-435b-9827-a482d8977e6e" width=273 /> 
 <img src="https://github.com/user-attachments/assets/eb3b7522-9490-4031-ad0a-6b2c4d7028ab" width=273 />
-
-2. Remove Catlog items
 <img src="https://github.com/user-attachments/assets/ef05a46f-c0a2-4e62-8783-1b1b90180c56" width=273 />
 
 ## Delete & Undo Catlog:
@@ -53,17 +50,15 @@ User can click on three-dashed icon for navigation view for more app orieneted o
 <img src="https://github.com/user-attachments/assets/b5f05a9a-828a-4463-ac8d-606b5d920ac1" width=273 />
 
 ###  Shopping Cart 
-This menu allows users to create a shopping list, add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
-1. Add Shopping Cart items
+This menu allows users to create a single quick shopping list to add items, adjust quantities using + and - icons, and mark items as checked or unchecked based on purchased status.
+1. In first image, Add Shopping Cart Items Implemented
+2. In second image, Undo Deleted Shoping Cart Items Implemented
+3. In third image, Delete Shoping Cart Items Implemented
+4. In fourth image, View & Edit Shopping Cart Implemented
+
 <img src="https://github.com/user-attachments/assets/df07103c-867a-4f99-8018-3a06c1115596" width=273 />
-
-2. Undo Shopping Cart items
 <img src="https://github.com/user-attachments/assets/d63365c5-b668-4bfb-8e46-4853223ad4b5" width=273 />
-
-3. Remove Shopping Cart items
 <img src="https://github.com/user-attachments/assets/2ec65e31-4703-4fbc-a950-5a2b74a689d3" width=273 />
-
-4. View and Edit Shopping Cart
 <img src="https://github.com/user-attachments/assets/3e8ed0b6-8760-4b15-b31a-54f0c80d316e" width=273 />
 
 <br />
